@@ -248,27 +248,6 @@ outputs/
 
 ---
 
-## Repository Structure
-
-Recommended GitHub repository structure:
-
-```text
-bitcoin-forecasting-project/
-├── Bitcoin_Daily.csv
-├── bitcoin_forecasting_solution_github.py
-├── README.md
-└── outputs/
-    ├── close_trend.png
-    ├── moving_averages.png
-    ├── mlp_actual_vs_predicted.png
-    ├── lstm_actual_vs_predicted.png
-    ├── training_loss.png
-    ├── metrics.csv
-    └── sample_predictions.csv
-```
-
----
-
 ## Installation
 
 Install the required Python libraries using the command below:
@@ -287,7 +266,7 @@ pip install pandas numpy matplotlib torch scikit-learn
 4. Run the Python file:
 
 ```bash
-python bitcoin_forecasting_solution_github.py
+python ML and DL Techniques – Week 5 Final Project - Cryptocurrency Price Forecast.ipynb
 ```
 
 After running the script, the console will display:
@@ -309,7 +288,7 @@ The script will also save charts and CSV files inside the `outputs` folder.
 The main Python file should be saved as:
 
 ```text
-bitcoin_forecasting_solution_github.py
+ML and DL Techniques – Week 5 Final Project - Cryptocurrency Price Forecast.ipynb
 ```
 
 This file performs the full workflow:
