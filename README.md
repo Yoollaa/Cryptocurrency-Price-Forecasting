@@ -1,5 +1,13 @@
 # Bitcoin Cryptocurrency Price Forecasting - MLP vs LSTM
 
+## Acknowledgment 
+
+I would like to express my sincere gratitude to **Professor David** for his dedicated time, continuous guidance, and commitment throughout this module. His ability to explain the topics using different teaching approaches and practical examples greatly supported our understanding and helped make complex concepts clearer and more accessible.
+
+I would also like to extend my appreciation to my supportive and professional colleagues, **Jahjah, Boualem, and Tahir**. Working with them was a very positive and valuable experience. Their collaboration, knowledge-sharing, and encouragement created a productive learning environment. I was truly happy to work with them, and I learned a lot from their different perspectives, professional experiences, and teamwork.
+
+This module has been a meaningful learning journey, and I am grateful for the support, guidance, and collaboration that contributed to my overall understanding and development.
+
 ## Project Overview
 
 This project predicts the **next-day Bitcoin closing price** using the previous **30 days of historical closing prices**.
