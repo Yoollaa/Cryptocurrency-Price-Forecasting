@@ -179,10 +179,10 @@ The models are evaluated using three regression metrics:
 
 ## Results
 
-| Model | MSE | MAE | MAPE (%) |
-|---|---:|---:|---:|
-| MLP | 1,648,744.25 | 1,013.33 | 4.53% |
-| LSTM | 1,291,356.38 | 794.61 | 3.44% |
+| Model | MSE | MAE | MAPE (%) | Interpretation |
+|---|---:|---:|---:|---|
+| MLP | 2,689,439 | 1,307.17 | 6.04% | Best-performing model in this experiment |
+| LSTM | 4,066,067 | 1,772.62 | 8.52% | Higher error than MLP in this experiment |
 
 ### Result Interpretation
 
@@ -313,7 +313,7 @@ This file performs the full workflow:
 
 ---
 
-## Ethical Note
+## Ethical Considerations
 
 This project is created for educational purposes.
 
@@ -331,6 +331,17 @@ Sudden market shocks
 
 The model uses historical price patterns only and does not guarantee future performance or profit.
 
+- Do not present forecasts as guaranteed profit predictions.
+- Communicate uncertainty clearly.
+- Include financial risk warnings.
+- Avoid using the model as the only basis for financial decisions.
+- Maintain human oversight when interpreting model outputs.
+- Monitor model performance regularly to avoid misleading or outdated predictions.
+- Document assumptions, limitations, and data scope clearly.
+- Ensure transparency about how the model works and what data it uses.
+- Protect privacy if customer-level or account-level data is used in future versions.
+- Avoid bias or unfair use of data if additional features are included later.
+
 ---
 
 ## Limitations
@@ -347,28 +358,46 @@ The main limitations of this project are:
 
 ## Future Improvements
 
-Possible improvements include:
+Possible future improvements include:
 
-1. Add more input features such as `open`, `high`, `low`, and `volume`.
+1. Add more input features such as open, high, low, volume, and macroeconomic indicators.
 2. Include technical indicators such as RSI, MACD, and Bollinger Bands.
-3. Add sentiment analysis from news or social media.
-4. Increase the number of epochs.
-5. Tune hyperparameters such as hidden size, learning rate, and batch size.
-6. Compare with additional models such as GRU, CNN-LSTM, Random Forest, or XGBoost.
-7. Use walk-forward validation for more realistic time-series evaluation.
+3. Add sentiment analysis using news or social media data.
+4. Track validation loss for both MLP and LSTM models.
+5. Improve hyperparameter tuning by testing different sequence lengths, hidden units, learning rates, epochs, and batch sizes.
+6. Compare the results with additional models such as GRU, CNN-LSTM, Random Forest, and XGBoost.
+7. Use walk-forward validation for a more realistic time-series evaluation.
+8. Add interpretation directly after the metrics tables and prediction plots.
+9. Retrain and monitor the model regularly because cryptocurrency market conditions change over time.
 
 ---
 
-## Final Conclusion
+## Final Interpretation
+In this experiment, the **MLP model outperformed the LSTM model** because it achieved lower MSE, MAE, and MAPE. Although LSTM is normally more suitable for sequence data, it did not perform better in this run.
 
-This project successfully compares MLP and LSTM models for Bitcoin next-day closing price prediction.
+Possible reasons include:
 
-The LSTM model achieved better performance in this run, with a lower MAPE of **3.44%** compared with the MLP MAPE of **4.53%**.
-
-This supports the idea that sequence-aware deep learning models can be more effective for time-series forecasting tasks than simple feedforward models.
-
+- The LSTM model may need more hyperparameter tuning.
+- Only the `close` price was used as input.
+- The number of epochs was limited.
+- Bitcoin prices are highly volatile and affected by external events.
+- MLP may have fitted the short 30-day window more effectively under the current setup.
 ---
+  
+## Business Interpretation
+The results show that a simpler model can sometimes perform better than a more complex model. A business should choose the model based on actual performance, stability, explainability, and business usefulness rather than assuming the most advanced architecture is always best.
 
+The model can support:
+
+- Trend monitoring
+- Portfolio risk awareness
+- Entry and exit timing support
+- Market analysis dashboards
+- Forecasting experiments
+
+However, the model should not be used as an automatic trading system without further validation and human oversight.
+
+----
 ## Author
 
 **Marize Wassef**
